@@ -1,0 +1,125 @@
+% package containing custom commands and environments to create the thesis layout
+% for Pforzheim University
+\ProvidesPackage{hspfthesis}
+
+\usepackage{titlesec}
+
+\usepackage{ifthen}
+
+\usepackage{datetime}
+
+
+\raggedbottom
+
+% changing chapter headings ----------------------------------------------------
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        %\huge\bfseries \@chapapp\space \thechapter
+        \Huge\bfseries \thechapter.\space%
+        %\par\nobreak
+        %\vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+% ------------------------------------------------------------------------------
+
+% custom header and footer -----------------------------------------------------
+\usepackage{lastpage}
+\usepackage{fancyhdr} % for use of \pageref{LastPage}
+\setlength{\headheight}{14.5pt} % set required minheight of 14.5pt
+\makeatletter
+\fancypagestyle{continued-mainmatter-style}{%
+  \fancyhf{}% Clear header and footer
+  % \fancyhead[LE,RO]{\slshape \rightmark}
+  \fancyhead[C]{\slshape \leftmark}
+  \fancyfoot[C]{\thepage\ von \pageref{LastPage}}% Custom footer
+  \renewcommand{\headrulewidth}{0.4pt}% Line at the header visible
+  \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+}
+\fancypagestyle{continued-frontmatter-style}{%
+  \fancyhf{}% Clear header and footer
+  % \fancyhead[LE,RO]{\slshape \rightmark}
+  \fancyhead[L,R]{\slshape \leftmark}
+  \fancyfoot[C]{\thepage\}}% Custom footer
+  \renewcommand{\headrulewidth}{0.4pt}% Line at the header visible
+  \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+}
+
+% Redefine the plain page style
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\thepage\ von \pageref{LastPage}}%
+  \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
+  \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+}
+\makeatother
+\pagestyle{continued-mainmatter-style}
+% ------------------------------------------------------------------------------
+
+\newcommand{\addsection}[1]{\input{sections/#1}}
+
+\newcommand{\addfigure}[4][width=12cm]{% \addfigure[width=12cm]{filename}{caption}{label}
+  \begin{figure}[htp]
+    \fbox{\includegraphics[#1]{#2}}
+    \caption{#3}\label{#4}
+  \end{figure}
+}
+
+% commands for defining the titlepage ------------------------------------------
+\newcommand{\matrikelnr}[1]{\renewcommand{\givenmatrikelnr}{#1}}
+\newcommand{\faculty}[1]{\renewcommand{\givenfaculty}{#1}}
+\newcommand{\major}[1]{\renewcommand{\givenmajor}{#1}}
+\newcommand{\subtitle}[1]{\renewcommand{\givensubtitle}{#1}}
+\newcommand{\mainexaminer}[1]{\renewcommand{\givenmainexaminer}{#1}}
+\newcommand{\secondaryexaminer}[1]{\renewcommand{\givensecondaryexaminer}{#1}}
+
+\newcommand{\givenmatrikelnr}{REQUIRED!}
+\newcommand{\givenfaculty}{REQUIRED!}
+\newcommand{\givenmajor}{REQUIRED!}
+\newcommand{\givensubtitle}{REQUIRED!}
+\newcommand{\givenmainexaminer}{REQUIRED!}
+\newcommand{\givensecondaryexaminer}{REQUIRED!}
+
+\newcommand{\facultytitle}{%
+Fakult\"at f\"ur \givenfaculty
+}
+\newcommand{\majortitle}{%
+Studiengang \givenmajor
+}
+
+\newcommand{\hstitlepage}{\include{titlepage}}
+% ------------------------------------------------------------------------------
+
+\newenvironment{frontmatter}%
+{
+  \cleardoublepage
+  \pagenumbering{roman}
+  \setcounter{page}{1}
+  \fancypagestyle{plain}{%
+    \fancyhf{}%
+    \fancyfoot[C]{\thepage}%
+    \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
+    \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+  }
+  \pagestyle{continued-frontmatter-style}
+}%
+{
+  \cleardoublepage
+  \pagenumbering{arabic}
+  \setcounter{page}{1}
+  \fancypagestyle{plain}{%
+    \fancyhf{}%
+    \fancyfoot[C]{\thepage\ von \pageref{LastPage}}%
+    \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
+    \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
+  }
+  \pagestyle{continued-mainmatter-style}
+}

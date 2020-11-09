@@ -1,0 +1,99 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{bibArticle}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1ef69f2b7bed6470770d1a2bf26112a8}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={Mike\bibnamedelima D},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=495b96ae499ad51cf9c26aa1161d4841}{%
+           family={Bartlett},
+           familyi={B\bibinitperiod},
+           given={Roger\bibnamedelima M},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{4e57d6bdad0624d7ecc45b7a3288c79a}
+      \strng{fullhash}{4e57d6bdad0624d7ecc45b7a3288c79a}
+      \strng{bibnamehash}{4e57d6bdad0624d7ecc45b7a3288c79a}
+      \strng{authorbibnamehash}{4e57d6bdad0624d7ecc45b7a3288c79a}
+      \strng{authornamehash}{4e57d6bdad0624d7ecc45b7a3288c79a}
+      \strng{authorfullhash}{4e57d6bdad0624d7ecc45b7a3288c79a}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The aims of this paper are to examine the application of performance indicators in diþ erent sports and, using the diþ erent structural de®{} nitions of games, to make general recommendations about the use and application of these indicators. Formal games are classi®{} ed into three categories: net and wall games, invasion games, and striking and ®{} elding games. The diþ erent types of sports are also sub-categorized by the rules of scoring and ending the respective matches. These classes are analysed further, to enable de®{} nition of useful performance indicators and to examine similarities and diþ erences in the analysis of the diþ erent categories of game. The indices of performance are sub-categorized into general match indicators, tactical indicators, technical indicators and biomechanical indicators. Diþ erent research examples and the accuracy of their presentation are discussed. We conclude that, to enable a full and objective interpretation of the data from the analysis of a performance, comparisons of data are vital. In addition, any analysis of the distribution of actions across the playing surface should also be presented normalized, or non-dimensionalized, to the total distribution of actions across the area. Other normalizations of performance indicators should also be used more widely in conjunction with the accepted forms of data analysis. Finally, we recommend that biomechanists should pay more attention to games to enrich the analysis of performance in these sports.}
+      \field{title}{The Use of Performance Indicators in Performance Analysis}
+      \field{pages}{17}
+      \range{pages}{1}
+      \verb{file}
+      \verb C\:\\Users\\Sebastian\\Zotero\\storage\\CIFWM7NA\\Hughes and Bartlett - The use of performance indicators in performance a.pdf
+      \endverb
+      \keyw{mpi}
+    \endentry
+    \entry{bibInternet}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5461bbb7e78d7f7e58811f84409e302f}{%
+           family={Elert},
+           familyi={E\bibinitperiod},
+           given={Glenn},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{5461bbb7e78d7f7e58811f84409e302f}
+      \strng{fullhash}{5461bbb7e78d7f7e58811f84409e302f}
+      \strng{bibnamehash}{5461bbb7e78d7f7e58811f84409e302f}
+      \strng{authorbibnamehash}{5461bbb7e78d7f7e58811f84409e302f}
+      \strng{authornamehash}{5461bbb7e78d7f7e58811f84409e302f}
+      \strng{authorfullhash}{5461bbb7e78d7f7e58811f84409e302f}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Speed is the answer to the question, 'How fast?' Velocity is speed with direction. Speed (velocity) is the rate of change of distance (displacement) with time.}
+      \field{journaltitle}{The Physics Hypertextbook}
+      \field{title}{Speed and {Velocity}}
+      \field{urlday}{22}
+      \field{urlmonth}{9}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Sebastian\\Zotero\\storage\\8DWRJSN8\\velocity.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://physics.info/velocity/
+      \endverb
+      \verb{url}
+      \verb https://physics.info/velocity/
+      \endverb
+      \keyw{mpi,physics,speed,velocity}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

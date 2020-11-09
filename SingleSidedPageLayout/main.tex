@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt]{report}
+%packages:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,ngerman]{babel} % english for abstract, main language German (thus put last)
+\usepackage{textcomp}
+\usepackage{graphicx} %to nicely integrate graphics and images into the document
+\usepackage{amsmath} %for mathematical formulae
+\usepackage{makeidx}
+\usepackage{csquotes} % recommended add when using biblatex
+\usepackage{hspfthesis} % note: this is written with German as the main language in mind
+
+% \usepackage{chngcntr}
+% \counterwithout{figure}{chapter}
+% \counterwithout{table}{chapter}
+
+\graphicspath{ {./images/} }
+
+% uncomment the below for sans-serif
+% \renewcommand{\familydefault}{\sfdefault} % Set document font sans-serif
+
+\frenchspacing %normal space after a period (don't know if it's a requirement with university documents)
+\makeindex
+\linespread{1.3} %will set line spacing to one and a half, not sure if that is required by uni?
+
+% uncomment \syntaxonly to only check syntax without creating the document
+\usepackage{syntonly}
+%\syntaxonly
+
+\usepackage[backend=biber,%
+            style=ieee]{biblatex}
+\addbibresource{resources/references1.bib}
+
+% ==============================================================================
+% Thesis information -----------------------------------------------------------
+\author{Sebastian Bellitto}
+\matrikelnr{317122}
+\mainexaminer{alle Titel Vorname Name} % Erstprüfer
+\secondaryexaminer{alle Titel Vorname Name} % Zweitprüfer, delete or comment if not applicable
+\newdate{deadline}{06}{09}{2012} % set date for deadline -> {DAY}{MONTH}{YEAR}
+\faculty{Technik}
+\major{Medizintechnik}
+\title{Halbzeitbericht Praxissemester}
+\subtitle{Verwendung von UMIs zur Bewegungsanalyse beim Laufen}
+% ==============================================================================
+\makeatletter
+\usepackage[pdfauthor={\@author},%
+            pdftitle={\@title},%
+            pdftex]{hyperref}
+\makeatother
+% \hypersetup{pdfauthor={\author},%
+%             pdftitle={\title}}
+
+% ==============================================================================
+% begin of the document (title and frontmatter)
+% ==============================================================================
+\begin{document}
+
+%setting the paragraph thing to not indent but leave space?
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.5ex minus 0.2ex}
+
+\hstitlepage
+
+\addsection{abstract}
+\begin{frontmatter}
+\chapter*{This should be starred}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+Matrikelnummer: \givenmatrikelnr
+
+Fakult\"at: \givenfaculty
+
+\tableofcontents
+\end{frontmatter}
+% ==============================================================================
+% Start of main section
+% ==============================================================================
+
+\addsection{chapter1}
+\addsection{chapter2}
+\addsection{chapter3}
+
+\listoffigures
+\printbibliography[heading=bibintoc, title={Literatur}]
+\printindex
+\end{document}

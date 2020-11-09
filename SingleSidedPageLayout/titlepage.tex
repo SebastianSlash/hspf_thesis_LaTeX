@@ -1,0 +1,35 @@
+\makeatletter
+\begin{titlepage}
+  \begin{center}
+    {\Large Hochschule Pforzheim \\%
+    \facultytitle \\%
+    \majortitle%
+    \par}
+
+    \vspace{\fill}
+
+    {\LARGE %
+    \textbf{\@title} \par %
+    \large \textit{\givensubtitle} \par }
+  \end{center}
+
+  \vspace{\fill}
+  % Student und Prof
+  \normalsize
+  \begin{tabular}{ll}
+    \ifthenelse{\equal{\givensecondaryexaminer}{REQUIRED!}}% check if a secondary examiner was given
+    {\textbf{Pr\"ufer} & \givenmainexaminer}% <- only one examiner
+    {\textbf{Erstpr\"ufer} & \givenmainexaminer} % <- two examiners
+    % \textbf{Erstpr\"ufer} & \givenmainexaminer \\
+    \\
+    \ifthenelse{\equal{\givensecondaryexaminer}{REQUIRED!}}{}% check if a secondary examiner was given
+    {\textbf{Zweitpr\"ufer} & \givensecondaryexaminer}
+    \\
+
+    \rule{0pt}{4ex}\textbf{vorgelegt von} & \@author \\
+    \textbf{Matrikelnummer} & \givenmatrikelnr \\
+    \\
+    \textbf{Abgabetermin} & \displaydate{deadline}
+  \end{tabular}
+\end{titlepage}
+\makeatother
