@@ -15,10 +15,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.2}Methode 2}{3}{subsection.2.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Neues Problem}{3}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Neues Problem}{4}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Problembeschreibung}{3}{section.2.4}%
+\contentsline {section}{\numberline {3.1}Problemlösung}{4}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Problemlösung}{3}{section.2.5}%
+\contentsline {chapter}{Tabellenverzeichnis}{5}{section*.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Literatur}{5}{chapter*.4}%
+\contentsline {chapter}{Abbildungsverzeichnis}{6}{section*.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Literatur}{7}{chapter*.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Index}{8}{section*.8}%

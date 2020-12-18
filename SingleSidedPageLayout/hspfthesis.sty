@@ -2,19 +2,19 @@
 % for Pforzheim University
 \ProvidesPackage{hspfthesis}
 
-\usepackage{titlesec}
-
-\usepackage{ifthen}
-
-\usepackage{datetime}
-
+\RequirePackage{titlesec}
+\RequirePackage{ifthen}
+\RequirePackage{datetime}
+\RequirePackage{lastpage}
+\RequirePackage{fancyhdr} % for use of \pageref{LastPage}
+\RequirePackage{etoolbox}
 
 \raggedbottom
 
 % changing chapter headings ----------------------------------------------------
 \makeatletter
 \def\@makechapterhead#1{%
-  \vspace*{50\p@}%
+  %\vspace*{50\p@}%
   {\parindent \z@ \raggedright \normalfont
     \ifnum \c@secnumdepth >\m@ne
       \if@mainmatter
@@ -29,11 +29,11 @@
     \vskip 40\p@
   }}
 \makeatother
+
 % ------------------------------------------------------------------------------
 
 % custom header and footer -----------------------------------------------------
-\usepackage{lastpage}
-\usepackage{fancyhdr} % for use of \pageref{LastPage}
+
 \setlength{\headheight}{14.5pt} % set required minheight of 14.5pt
 \makeatletter
 \fancypagestyle{continued-mainmatter-style}{%
@@ -47,8 +47,8 @@
 \fancypagestyle{continued-frontmatter-style}{%
   \fancyhf{}% Clear header and footer
   % \fancyhead[LE,RO]{\slshape \rightmark}
-  \fancyhead[L,R]{\slshape \leftmark}
-  \fancyfoot[C]{\thepage\}}% Custom footer
+  \fancyhead[C]{\slshape \leftmark}
+  \fancyfoot[C]{\thepage}% Custom footer
   \renewcommand{\headrulewidth}{0.4pt}% Line at the header visible
   \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
 }
@@ -62,12 +62,20 @@
 }
 \makeatother
 \pagestyle{continued-mainmatter-style}
+
+% remove the word "chapter"/"Kapitel" from header
+
+\makeatletter
+%\ patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
+\patchcmd{\chaptermark}{\@chapapp\ }{}{}{}
+\makeatother
 % ------------------------------------------------------------------------------
 
 \newcommand{\addsection}[1]{\input{sections/#1}}
 
 \newcommand{\addfigure}[4][width=12cm]{% \addfigure[width=12cm]{filename}{caption}{label}
   \begin{figure}[htp]
+    \centering
     \fbox{\includegraphics[#1]{#2}}
     \caption{#3}\label{#4}
   \end{figure}
