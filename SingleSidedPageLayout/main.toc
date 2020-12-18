@@ -24,5 +24,3 @@
 \contentsline {chapter}{Abbildungsverzeichnis}{6}{section*.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Literatur}{7}{chapter*.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Index}{8}{section*.8}%
