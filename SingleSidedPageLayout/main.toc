@@ -2,6 +2,8 @@
 \babel@toc {ngerman}{}
 \babel@toc {english}{}
 \babel@toc {ngerman}{}
+\babel@toc {english}{}
+\babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
 \defcounter {refsection}{0}\relax 
@@ -19,8 +21,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Problemlösung}{4}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Tabellenverzeichnis}{5}{section*.3}%
+\contentsline {chapter}{Literatur}{5}{chapter*.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Abbildungsverzeichnis}{6}{section*.5}%
+\contentsline {chapter}{Tabellenverzeichnis}{6}{section*.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Literatur}{7}{chapter*.7}%
+\contentsline {chapter}{Abbildungsverzeichnis}{7}{section*.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Glossar}{8}{section*.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Akronyme}{9}{section*.10}%

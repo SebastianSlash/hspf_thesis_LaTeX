@@ -10,9 +10,10 @@
 \usepackage{csquotes} % recommended add when using biblatex
 \usepackage{hspfthesis} % note: this is written with German as the main language in mind
 
-% \usepackage{chngcntr}
-% \counterwithout{figure}{chapter}
-% \counterwithout{table}{chapter}
+% changes figure and table numbering to exclude the chapter number
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
 
 \graphicspath{ {./images/} }
 
@@ -42,6 +43,23 @@
 \major{Medizintechnik}
 \title{Meine Super Tolle Thesis}
 \subtitle{Geschrieben mit \LaTeX , nicht Word}
+
+% ==============================================================================
+% Acronym Definition -----------------------------------------------------------
+\usepackage[acronyms,toc]{glossaries}
+\makeglossaries
+
+\newglossaryentry{anthropometry}
+{
+    name=anthroprometrisch,
+    description={Anthropometrie ist die Lehre der Ermittlung und Anwendung der Maße des menschlichen Körpers \footnote{https://de.wikipedia.org/wiki/Anthropometrie}}
+}
+
+\newacronym{mpi}{MPI}{Motion Performance Indicator}
+\newacronym{imu}{IMU}{Inertial Measurement Unit}
+\newacronym{tt}{TT}{Time Trail}
+\newacronym{gui}{GUI}{Graphical User Interface}
+
 % ==============================================================================
 \makeatletter
 \usepackage[pdfauthor={\@author},%
@@ -50,6 +68,9 @@
 \makeatother
 % \hypersetup{pdfauthor={\author},%
 %             pdftitle={\title}}
+
+
+
 
 % ==============================================================================
 % begin of the document (title and frontmatter)
@@ -62,13 +83,15 @@
 
 \hstitlepage
 
-\addsection{abstract}
 \begin{frontmatter}
-\chapter*{This should be starred}
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
+\addsection{abstract}
+
+\chapter*{This should be starred}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At \gls{imu} vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 \tableofcontents
+
 \end{frontmatter}
 % ==============================================================================
 % Start of main section
@@ -78,17 +101,19 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 \addsection{chapter2}
 \addsection{chapter3}
 
+\printbibliography[heading=bibintoc, title={Literatur}]
 \cleardoublepage
 \phantomsection
+
 \addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
-
 \cleardoublepage
 \phantomsection
+
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
-\printbibliography[heading=bibintoc, title={Literatur}]
+\printglossaries
 
 % \cleardoublepage
 % \phantomsection

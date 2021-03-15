@@ -110,7 +110,7 @@ Studiengang \givenmajor
 {
   \cleardoublepage
   \pagenumbering{roman}
-  \setcounter{page}{1}
+  \setcounter{page}{2}
   \fancypagestyle{plain}{%
     \fancyhf{}%
     \fancyfoot[C]{\thepage}%
@@ -130,4 +130,16 @@ Studiengang \givenmajor
     \renewcommand{\footrulewidth}{0.4pt}% Line at the footer visible
   }
   \pagestyle{continued-mainmatter-style}
+}
+
+\newenvironment{custom-abstract}%
+{
+  \thispagestyle{plain}
+  \begin{center}
+    {\large \textbf{\abstractname}}
+  \end{center}
+  \pagestyle{continued-frontmatter-style}
+}%
+{
+  \pagestyle{continued-frontmatter-style}
 }
